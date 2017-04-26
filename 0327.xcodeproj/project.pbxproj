@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F6C82B31EB0432B005C5932 /* qcsyt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F6C82B21EB0432B005C5932 /* qcsyt.jpg */; };
 		7F7315A81E88B4040003E7F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7315A71E88B4040003E7F9 /* AppDelegate.swift */; };
 		7F7315AA1E88B4040003E7F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7315A91E88B4040003E7F9 /* ViewController.swift */; };
 		7F7315AD1E88B4040003E7F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F7315AB1E88B4040003E7F9 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F6C82B21EB0432B005C5932 /* qcsyt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = qcsyt.jpg; path = ../../../qcsyt.jpg; sourceTree = "<group>"; };
 		7F7315A41E88B4040003E7F9 /* 0327.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 0327.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7315A71E88B4040003E7F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F7315A91E88B4040003E7F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		7F7315A61E88B4040003E7F9 /* 0327 */ = {
 			isa = PBXGroup;
 			children = (
+				7F6C82B21EB0432B005C5932 /* qcsyt.jpg */,
 				7F7315A71E88B4040003E7F9 /* AppDelegate.swift */,
 				7F7315A91E88B4040003E7F9 /* ViewController.swift */,
 				7F7315AB1E88B4040003E7F9 /* Main.storyboard */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6C82B31EB0432B005C5932 /* qcsyt.jpg in Resources */,
 				7F7315B21E88B4040003E7F9 /* LaunchScreen.storyboard in Resources */,
 				7F7315AF1E88B4040003E7F9 /* Assets.xcassets in Resources */,
 				7F7315AD1E88B4040003E7F9 /* Main.storyboard in Resources */,
@@ -505,6 +509,7 @@
 				7F7315CE1E88B4040003E7F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F7315CF1E88B4040003E7F9 /* Build configuration list for PBXNativeTarget "0327Tests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				7F7315D11E88B4040003E7F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F7315D21E88B4040003E7F9 /* Build configuration list for PBXNativeTarget "0327UITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				7F7315D41E88B4040003E7F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
