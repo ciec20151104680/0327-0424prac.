@@ -9,60 +9,47 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var a:Int = 0
+    var b:Int = 0
+    var c:Int = 1
+    var d:Int = 0
+    var e:Int = 0
+    var array1 : [Int] = [0,0,0]
+    var array2 : [Int] = [0,0,0]
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    import UIKit
-    
-    enum ScoreType{
-        case Common  //普通分数面板
-        case Best    //最高分面板
-    }
-    
-    protocol ScoreViewProtocol{
-        
-        func changeScore(value s:Int)
-    }
-    
-    class ScoreView:UIView, ScoreViewProtocol
-    {
-        var label:UILabel!
-        
-        let defaultFrame = CGRectMake(0,0,100,30)
-        var stype:String!  //显示”最高分“还是”分数“
-        var score:Int = 0{
-            didSet{
-                //分数变化，标签内容也要变化
-                label.text = "\(stype):\(score)"
-            }
-        }
-        
-        //传入分数面板的类型，用于控制标签的显示
-        init(stype:ScoreType)
+    @IBOutlet weak var temp: UITextField!
+    @IBOutlet weak var temp1: UITextField!
+    @IBOutlet weak var temp2: UITextField!
+    @IBOutlet weak var temp4: UITextField!
+    @IBAction func adda(_ sender: Any) {
+        a=a+1
+        if( b<10 && a==11 || b>=10 && a-b==2 )
         {
-            label = UILabel(frame:defaultFrame)
-            label.textAlignment = NSTextAlignment.Center
-            
-            super.init(frame:defaultFrame)
-            
-            self.stype = (stype == ScoreType.Common ? "分数":"最高分")
-            
-            backgroundColor = UIColor.orangeColor()
-            label.font = UIFont(name:"微软雅黑", size:16)
-            label.textColor = UIColor.whiteColor()
-            self.addSubview(label)
+            temp.text="\("第" + String(c) + "局a胜" + String(a) + ":" + String(b))"
+            array1[c-1] = a
+            array2[c-1] = b
+            c=c+1
+            a=0
+            b=0
+            d=d+1
+            temp1.text="\(d)"
+            if (c == 4)
+            {
+                temp4.text="\("比赛结束" + String(d) + ":" + String(e))"
+                temp.text="\( "a赢  " )"
+                c=1;
+                d=0;
+                e=0;
+                temp2.text = "\(e)"
+                temp1.text="\(d)"
+                
+            }
+        }else
+        {
+            temp.text="\( String(a) + ":" + String(b) )"
+            temp4.text="\("第" + String(c) + "局")"
         }
         
-        required init(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
-        }
-
 }
 
