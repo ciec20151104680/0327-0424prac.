@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F6C2E9D1EC2B41700B5AAF1 /* 20150407H1001_4aARj.thumb.224_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F6C2E9C1EC2B41700B5AAF1 /* 20150407H1001_4aARj.thumb.224_0.jpg */; };
+		7F6C2E9F1EC2B41F00B5AAF1 /* u=2377024709,1490652863&fm=23&gp=0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F6C2E9E1EC2B41F00B5AAF1 /* u=2377024709,1490652863&fm=23&gp=0.jpg */; };
 		7F6C82B31EB0432B005C5932 /* qcsyt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F6C82B21EB0432B005C5932 /* qcsyt.jpg */; };
 		7F7315A81E88B4040003E7F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7315A71E88B4040003E7F9 /* AppDelegate.swift */; };
 		7F7315AA1E88B4040003E7F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7315A91E88B4040003E7F9 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F6C2E9C1EC2B41700B5AAF1 /* 20150407H1001_4aARj.thumb.224_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20150407H1001_4aARj.thumb.224_0.jpg; sourceTree = SOURCE_ROOT; };
+		7F6C2E9E1EC2B41F00B5AAF1 /* u=2377024709,1490652863&fm=23&gp=0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "u=2377024709,1490652863&fm=23&gp=0.jpg"; sourceTree = "<group>"; };
 		7F6C82B21EB0432B005C5932 /* qcsyt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = qcsyt.jpg; path = ../../../qcsyt.jpg; sourceTree = "<group>"; };
 		7F7315A41E88B4040003E7F9 /* 0327.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 0327.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7315A71E88B4040003E7F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		7F7315A61E88B4040003E7F9 /* 0327 */ = {
 			isa = PBXGroup;
 			children = (
+				7F6C2E9E1EC2B41F00B5AAF1 /* u=2377024709,1490652863&fm=23&gp=0.jpg */,
+				7F6C2E9C1EC2B41700B5AAF1 /* 20150407H1001_4aARj.thumb.224_0.jpg */,
 				7F6C82B21EB0432B005C5932 /* qcsyt.jpg */,
 				7F7315A71E88B4040003E7F9 /* AppDelegate.swift */,
 				7F7315A91E88B4040003E7F9 /* ViewController.swift */,
@@ -238,6 +244,8 @@
 				7F6C82B31EB0432B005C5932 /* qcsyt.jpg in Resources */,
 				7F7315B21E88B4040003E7F9 /* LaunchScreen.storyboard in Resources */,
 				7F7315AF1E88B4040003E7F9 /* Assets.xcassets in Resources */,
+				7F6C2E9F1EC2B41F00B5AAF1 /* u=2377024709,1490652863&fm=23&gp=0.jpg in Resources */,
+				7F6C2E9D1EC2B41700B5AAF1 /* 20150407H1001_4aARj.thumb.224_0.jpg in Resources */,
 				7F7315AD1E88B4040003E7F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
