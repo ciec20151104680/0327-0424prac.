@@ -81,4 +81,53 @@ class ViewController: UIViewController {
         }
 }
 
+    @IBAction func acca(_ sender: Any) {
+        if(a>0)
+        {
+            a=a-1
+            if( a<10 && b==11 || a>=10 && b-a==2)
+            {
+                temp.text="\("第" + String(c) + "局b胜" + String(a) + ":" + String(b))"
+                array1[c-1] = a
+                array2[c-1] = b
+                c=c+1
+                a=0
+                b=0
+                e=e+1
+                temp2.text = "\(e)"
+                if (c == 4)
+                {
+                    temp4.text="\("比赛结束" + String(d) + ":" + String(e))"
+                    temp.text="\( "b赢  " )"
+                    c=1;
+                    d=0;
+                    e=0;
+                    temp2.text = "\(e)"
+                    temp1.text="\(d)"
+                }
+            }else
+            {
+                temp.text="\( String(a) + ":" + String(b) )"
+            }
+            
+        }
+        else if(a==0)
+        {
+            if(( c>=1 && d>=1))
+            {
+                a=array1[c-2]-1
+                b=array2[c-2]
+                c=c-1
+                d=d-1
+                temp4.text="\("第" + String(c) + "局")"
+                temp1.text="\(d)"
+                temp.text="\( String(a) + ":" + String(b) )"
+            }
+            
+            
+        }
+        
+        
+        
+}
 
