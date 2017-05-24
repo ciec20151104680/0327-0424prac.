@@ -79,15 +79,6 @@ class ViewController: UIViewController {
             temp1.text="\("第" + String(c) + "局")"
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     @IBAction func aj(_ sender: Any) {
         if(a>0)
@@ -136,5 +127,52 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func bj(_ sender: Any) {
+        if(b>0)
+        {
+            b=b-1
+            if( b<10 && a==11 || b>=10 && a-b==2 )
+            {
+                temp.text="\("第" + String(c) + "局a胜" + String(a) + ":" + String(b))"
+                array1[c-1] = a
+                array2[c-1] = b
+                c=c+1
+                a=0
+                b=0
+                d=d+1
+                temp1.text="\(d)"
+                if (c == 4)
+                {
+                    temp0.text="\("比赛结束" + String(d) + ":" + String(e))"
+                    temp.text="\( "a赢  " )"
+                    c=1;
+                    d=0;
+                    e=0;
+                    temp0.text = "\(e)"
+                    temp0.text="\(d)"
+                }
+                else
+                {
+                    temp2.text="\( String(a) + ":" + String(b) )"
+                }
+            }
+            
+        }
+        else if(b==0)
+        {
+            if(( c>=1 && e>=1))
+            {
+                a=array1[c-2]
+                b=array2[c-2]-1
+                c=c-1
+                e=e-1
+                temp1.text="\("第" + String(c) + "局")"
+                temp0.text="\(e)"
+                temp2.text="\( String(a) + ":" + String(b) )"
+            }
+            
+        }
+    }
 }
+
 
