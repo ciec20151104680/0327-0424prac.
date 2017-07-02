@@ -180,26 +180,28 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
     @IBOutlet weak var Aimg: UIImageView!
     @IBOutlet weak var Bimg: UIImageView!
-    @IBAction func sc(_ sender: Any) {
-            if dlg == 0{
-                flagA = 1
-                flagB = 0
-                if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
-                {
-                    let picker = UIImagePickerController()
-                    picker.delegate = self
-                    picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
-                    self.present(picker,animated: true,completion: {
-                        ()->Void in
-                    })
-                }else{
-                    print("读取相册错误")
-                }
+
+    @IBAction func addimg1(_ sender: Any) {
+        if dlg == 0{
+            flagA = 1
+            flagB = 0
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
+            {
+                let picker = UIImagePickerController()
+                picker.delegate = self
+                picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+                self.present(picker,animated: true,completion: {
+                    ()->Void in
+                })
+            }else{
+                print("读取相册错误")
             }
         }
-        
+    }
     
-    @IBAction func sc2(_ sender: Any) {
+    
+
+    @IBAction func addimg2(_ sender: Any) {
         if dlg == 0{
             flagB = 1
             flagA = 0
@@ -216,8 +218,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                 print("读取相册错误")
             }
         }
-        
-
     }
     
     func imagePickerController(_ picker : UIImagePickerController,

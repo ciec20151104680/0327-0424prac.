@@ -98,7 +98,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="上传照片"/>
                                 <connections>
-                                    <action selector="sc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83J-jO-VD2"/>
+                                    <action selector="addimg1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fw5-zZ-qNi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOx-60-jDY">
@@ -106,7 +106,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="上传照片"/>
                                 <connections>
-                                    <action selector="sc2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kCs-Ii-pvg"/>
+                                    <action selector="addimg2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJM-6z-Nd6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hs-x6-4QW">
