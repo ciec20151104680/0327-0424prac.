@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     var a:Int = 0
     var b:Int = 0
     var c:Int = 1
@@ -16,13 +16,17 @@ class ViewController: UIViewController {
     var e:Int = 0
     var array1 : [Int] = [0,0,0]
     var array2 : [Int] = [0,0,0]
+    var flagA = 0
+    var flagB = 0
+    var dlg = 0
     
     @IBOutlet weak var temp: UITextField!
     @IBOutlet weak var temp0: UITextField!
     @IBOutlet weak var temp1: UITextField!
     @IBOutlet weak var temp2: UITextField!
     
-    @IBAction func a1(_ sender: Any) {
+
+    @IBAction func addA(_ sender: Any) {
         a=a+1
         if( b<10 && a==11 || b>=10 && a-b==2 )
         {
@@ -51,7 +55,8 @@ class ViewController: UIViewController {
             temp1.text="\("第" + String(c) + "局")"
         }
     }
-    @IBAction func b1(_ sender: Any) {
+
+    @IBAction func addB(_ sender: Any) {
         b=b+1
         if( a<10 && b==11 || a>=10 && b-a==2)
         {
@@ -143,13 +148,13 @@ class ViewController: UIViewController {
                 temp1.text="\(d)"
                 if (c == 4)
                 {
-                    temp0.text="\("比赛结束" + String(d) + ":" + String(e))"
+                    temp1.text="\("比赛结束" + String(d) + ":" + String(e))"
                     temp.text="\( "a赢  " )"
                     c=1;
                     d=0;
                     e=0;
-                    temp0.text = "\(e)"
-                    temp0.text="\(d)"
+                    temp.text = "\(e)"
+                    temp.text="\(d)"
                 }
                 else
                 {
@@ -173,6 +178,68 @@ class ViewController: UIViewController {
             
         }
     }
-}
+    @IBOutlet weak var Aimg: UIImageView!
+    @IBOutlet weak var Bimg: UIImageView!
+    @IBAction func sc(_ sender: Any) {
+            if dlg == 0{
+                flagA = 1
+                flagB = 0
+                if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
+                {
+                    let picker = UIImagePickerController()
+                    picker.delegate = self
+                    picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+                    self.present(picker,animated: true,completion: {
+                        ()->Void in
+                    })
+                }else{
+                    print("读取相册错误")
+                }
+            }
+        }
+        
+    
+    @IBAction func sc2(_ sender: Any) {
+        if dlg == 0{
+            flagB = 1
+            flagA = 0
+            
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
+            {
+                let picker = UIImagePickerController()
+                picker.delegate = self
+                picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+                self.present(picker,animated: true,completion: {
+                    ()->Void in
+                })
+            }else{
+                print("读取相册错误")
+            }
+        }
+        
+
+    }
+    
+    func imagePickerController(_ picker : UIImagePickerController,
+                                   didFinishPickingMediaWithInfo
+            info:[String:Any]){
+            print(info)
+            let image : UIImage!
+            image = info[UIImagePickerControllerOriginalImage]as!UIImage
+            if(flagA == 1){
+                Aimg.image = image
+            }
+            else if(flagB == 1){
+                Bimg.image = image
+            }
+            
+            picker.dismiss(animated:true,completion: {
+                ()-> Void in
+            })
+            
+        }
+        
+    }
+
 
 
